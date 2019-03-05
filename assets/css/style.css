@@ -1,21 +1,83 @@
+body {
+    background: #dcdcdc;
+}
+#title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+    font-weight: bold;
+}
+
+#gif-buttons {
+    margin: .5rem;
+}
+
 .gif-search {
     margin:.25rem .25rem;
+    padding: .5rem;
+    background: #4F5BD4;
+    color: #eaeaea;
+    width: fit-content;
+    display: inline-block;
+    border-radius: 10%;
 }
+
+
+.gif-search:hover {
+    background: #78DDEB;
+    color: #4f58d4;
+}
+
+
+#gif-form {
+    text-align: center;
+}
+
+#favorite-btn {
+    display: inline-block;
+    padding: .5rem;
+    margin: 1rem;
+    text-decoration: none;
+    background: greenyellow;
+    color: white;
+
+}
+
 .my-buttons {
     margin: .25rem .25rem;
     
 }
 
 .each-gif {
+    margin: .75rem 1rem;
+    padding: .5rem;
+    
+}
+
+.image-options {
+    margin: .1rem 1rem;
+}
+.image-options p {
     float: left;
-    margin: .5rem;
-    width: auto; 
+    margin: 0 1rem;
+    
+}
+
+.each-gif img {
+    width: 100%;
 }
 
 .rating {
     text-align: center;
 }
-
+.each-gif {
+    margin:0 auto;
+}
+#favorite-title {
+    color: red;
+    font-size: 1.75rem;
+    text-align: center;
+}
 /*
 individual gif div = .each-gif
 gif buttons = .my-buttons

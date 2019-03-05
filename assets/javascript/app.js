@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var topics = ["beer", "sailing", "ocean", "food"];
+    var topics = ["beer", "sailboat", "ocean", "food", "nfl", "cars", "music", "comedy", "guitar", "nature" ];
     var image;
     var imageURL;
     var downloadButton;
@@ -9,7 +9,7 @@ $(document).ready(function(){
 function gifButton(){   
     $("#gif-buttons").empty();
     for(var i = 0; i < topics.length; i++) {
-        var gifButton =  $("<button>"); 
+        var gifButton =  $("<p>"); 
         gifButton.addClass("gif-search");
         gifButton.attr("gif-data", topics[i]);
         gifButton.text(topics[i])
@@ -51,7 +51,8 @@ function gifSearch() {
 
                 var gifDiv = $("<div>");
                 gifDiv.addClass("each-gif");
-                var innerDiv =$("<div>");
+                var innerDiv = $("<div>");
+                innerDiv.addClass("image-options")
                 var rating = results[i].rating;
                 var p = $("<p>").text("Rating: " + rating);
                 p.addClass("rating");
@@ -68,11 +69,11 @@ function gifSearch() {
                 image.attr("data-still", imageURLStill);
                 image.attr("data-animate", imageURL);
                 image.addClass("myGif");
+                gifDiv.prepend(innerDiv);
                 innerDiv.prepend(favorite)
                 innerDiv.prepend(downloadButton);
                 innerDiv.prepend(p);
                 gifDiv.prepend(image);
-                gifDiv.prepend(innerDiv);
                 $("#gifs").prepend(gifDiv);
             }
 });
