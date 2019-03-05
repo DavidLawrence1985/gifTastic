@@ -1,3 +1,24 @@
-#gif-buttons button {
-    margin: 10px;
+.gif-search {
+    margin:.25rem .25rem;
 }
+.my-buttons {
+    margin: .25rem .25rem;
+    
+}
+
+.each-gif {
+    float: left;
+    margin: .5rem;
+    width: auto; 
+}
+
+.rating {
+    text-align: center;
+}
+
+/*
+individual gif div = .each-gif
+gif buttons = .my-buttons
+gif buttons = .gif-search
+gif image = .myGif
+*/
