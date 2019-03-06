@@ -7,28 +7,32 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
     <title>Gif tastic</title>
 </head>
 <body>
     <header>
-        <p id="title">Giphed and Confused</p>
+        <p id="title">Go Gif Yourself</p>
     </header>
+    <div class="head-wrap">
+        <div id="gif-buttons"></div>
 
-    <div id="gif-buttons"></div>
+        <form id="gif-form">
+                <label for="gif-input"></label>
+                <input type="text" id="gif-input" placeholder="Add Gif Button">
+                <p id="add-gif" class="form-btn" type="submit" value="Add Gif">submit</p>
+                <a href="#favorites"class="form-btn" id="fav-btn">Favorites</a>
+        </form>
+    </div>
 
-    <form id="gif-form">
-            <label for="gif-input">gif search</label>
-            <input type="text" id="gif-input">
-            <input id="add-gif" type="submit" value="Add Gif">
-    </form>
-
-    <a href="#favorites" id="favorite-btn">Favorites</a>
-    
-    <div id="gifs"></div>
+    <div id="gifs" class="grid"></div>
 
     <div id="favorites">
-        <p id="favorite-title">Your Favorites
-        </p>
+        <p id="favorite-title">Your Favorites</p>
+
+        <div id="your-fav">
+
+        </div>
     </div>
 
     <script type ="text/javascript" src="assets/javascript/app.js"></script>
