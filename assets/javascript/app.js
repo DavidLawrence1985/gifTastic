@@ -3,8 +3,8 @@ $(document).ready(function(){
     var topics = [ "Sailboat", "Ocean", "Beer", "BBQ", "Football", "Dogs", "Music", "Stand-Up", "Guitar", "Nature"];
     var image;
     var imageURL;
-    var downloadButton;
-    var downloadFileName;
+    //var downloadButton;
+    //var downloadFileName;
     var favorite;
     var imageURLStill;
     var results;
@@ -23,13 +23,13 @@ $(document).ready(function(){
         }
     }
 
-    function downloadGif(){
+    /*function downloadGif(){
             downloadFileName.download({
             url : imageURL,
             filename : downloadFileName,
             conflictAction : "prompt"
         });
-    }
+    }*/
 
     $("#add-gif").on("click", function() {
         event.preventDefault();
@@ -116,7 +116,7 @@ $(document).ready(function(){
     }
     
 
-    $(document).on("click", ".download-button", downloadGif);
+    //$(document).on("click", ".download-button", downloadGif); 
 
     $(document).on("click", ".myGif", pauseGif);
 
@@ -131,6 +131,3 @@ $(document).ready(function(){
 
 
 
-//create a favorite button for each gif that is loaded 
-//button will prepend to favoite section
-//download with link?
