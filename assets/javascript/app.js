@@ -1,11 +1,11 @@
 $(document).ready(function(){
-    var topics = ["Beer", "Sailboat", "Ocean", "BBQ", "Football", "Dogs", "Music", "Comedy", "Guitar", "Nature"];
+    var topics = ["Beer", "Sailboat", "Ocean", "BBQ", "Football", "Dogs", "Music", "Stand-Up", "Guitar", "Nature"];
     var image;
     var imageURL;
     var downloadButton;
     var downloadFileName;
     var favorite;
-
+    var imageURLStill;
     
     function gifButton(){   
         $("#gif-buttons").empty();
@@ -64,7 +64,7 @@ $(document).ready(function(){
                     favorite.addClass("favorite-button my-buttons");
                     image = $("<img>");
                     imageURL = results[i].images.fixed_height.url;
-                    var imageURLStill = results[i].images.fixed_height_still.url;
+                    imageURLStill = results[i].images.fixed_height_still.url;
                     image.attr("src", imageURL );
                     image.attr("data-still", imageURLStill);
                     image.attr("data-animate", imageURL);
@@ -93,7 +93,15 @@ $(document).ready(function(){
 
     function addFav(){
        $(this).on("click", function(){
-            $("#your-fav").prepend(image)
+            var favImage = $(this);
+            favImage = $("<img>");
+            var favImageURL = $(this).results.images.fixed_height.url;
+            var favImageURLStill = $(this).results.fixed_height_still.url;
+            favImage.attr("src" , favImageURL);
+            favImage.attr("data-still", favImageURLStill);
+            favImage.attr("data-animate", favImageURL);
+            $("#your-fav").prepend(favImage)
+            //need to add results = response.data into this fucntion to access the results
             
         })
     } 
@@ -104,7 +112,7 @@ $(document).ready(function(){
 
     $(document).on("click", ".gif-search", gifSearch);
 
-    //$(document).on("click", ".favorite-button", addFav)
+    $(document).on("click", ".favorite-button", addFav)
     
     gifButton();
 
