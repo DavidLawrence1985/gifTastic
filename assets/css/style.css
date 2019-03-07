@@ -144,7 +144,7 @@ body {
     
 }
 
-#favorites p {
+#favorite-title {
     color: red;
     border-bottom: 2px solid red;
     font-family: 'Kanit', sans-serif;
@@ -152,17 +152,23 @@ body {
     margin-bottom: 1rem;
 }
 
-@media (min-width: 700px){
+@media (min-width: 650px){
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
     #gif{
         display:grid;
-        grid-template: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-gap: .25rem;
         
     }
+    #your-fav{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) ;
+        grid-gap: .25rem;
+    }
+
     #title {
         font-size: 5rem;
     }
@@ -180,6 +186,9 @@ body {
         margin: 0 .5rem;
     }
     #favorites {
+        margin: 0 auto;
+    }
+    #favorite-title {
         font-size: 3rem;
     }
     .my-buttons {
