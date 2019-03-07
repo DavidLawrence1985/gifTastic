@@ -105,14 +105,10 @@ $(document).ready(function(){
 
     function addFav(){
         
-        
-       $(".favorite-button").on("click", function(){
-           $(this).hide();//takes 2 clicks to work function
+           $(this).hide();
             var favImg = $(this).parent().parent();
-            favImg.clone().prependTo("#your-fav");//doubles up on second time add fav from same gif search
+            favImg.clone().prependTo("#your-fav");
             
-      });
-     
     }
     
 
@@ -125,6 +121,8 @@ $(document).ready(function(){
     $(document).on("click", ".favorite-button", addFav)
     
     gifButton();
+
+    
     
 
 })
